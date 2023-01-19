@@ -15,7 +15,7 @@ console.log(arr3);
 const arr = [0, 1, 2, 3, 4];
 const arr4 = arr.forEach((item) => console.log(item * 3));
 
-<---------------------------------------------------------->
+<------------------------------------------------------------>
 // filter trong array
 // lấy ra số chẵn - lẻ trong mảng
 const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -47,3 +47,22 @@ function callback(item) {
 }
 const arrXX = filterX(callback);
 console.log(arrXX);
+
+<------------------------------------------------------------>
+
+// phương thức reduce trong array
+// mẫu cho xem cách hoạt động của reduce
+const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function callback(pre, cur, index) {
+console.table({
+'đang chạy trên phần tử thứ:' : index,
+'giá trị tích trữ trc đó:' : pre,
+'giá trị phần tử đang xét:' : cur,
+'giá trị tích trữ mới:' : pre + cur,
+});
+return pre + cur;
+}
+arr.reduce(callback, 0);
+
+//cách ngắn hơn
+console.log(arr.reduce(callback));
