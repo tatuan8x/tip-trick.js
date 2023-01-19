@@ -65,4 +65,9 @@ return pre + cur;
 arr.reduce(callback, 0);
 
 //cách ngắn hơn
+const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function callback(pre, cur, index) {
+    return pre + cur;
+}
+arr.reduce(callback, 0);
 console.log(arr.reduce(callback));
